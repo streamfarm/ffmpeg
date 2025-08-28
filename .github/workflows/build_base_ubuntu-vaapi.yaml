@@ -73,8 +73,8 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            datarhei/base:ffmpeg${{ env.FFMPEG_VERSION }}-vaapi-${{ env.OS_NAME }}${{ env.OS_VERSION }}
-            datarhei/base:${{ env.OS_NAME }}-ffmpeg-vaapi-${{ env.OS_VERSION }}-${{ env.FFMPEG_VERSION }}
-            datarhei/base:${{ env.OS_NAME }}-ffmpeg-vaapi-latest
+            sharapov/streamfarm-ffmpeg-base:ffmpeg${{ env.FFMPEG_VERSION }}-vaapi-${{ env.OS_NAME }}${{ env.OS_VERSION }}
+            sharapov/streamfarm-ffmpeg-base:${{ env.OS_NAME }}-ffmpeg-vaapi-${{ env.OS_VERSION }}-${{ env.FFMPEG_VERSION }}
+            sharapov/streamfarm-ffmpeg-base:${{ env.OS_NAME }}-ffmpeg-vaapi-latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new

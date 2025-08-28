@@ -29,8 +29,8 @@ function build_default() {
     --build-arg FFMPEG_VERSION=$FFMPEG_VERSION \
     --platform linux/amd64 \
     -f Dockerfile.alpine \
-    -t datarhei/base:$OS_NAME-ffmpeg-$OS_VERSION-$FFMPEG_VERSION .
-  docker tag datarhei/base:$OS_NAME-ffmpeg-$OS_VERSION-$FFMPEG_VERSION datarhei/base:$OS_NAME-ffmpeg-latest
+    -t sharapov/streamfarm-ffmpeg-base:$OS_NAME-ffmpeg-$OS_VERSION-$FFMPEG_VERSION .
+  docker tag sharapov/streamfarm-ffmpeg-base:$OS_NAME-ffmpeg-$OS_VERSION-$FFMPEG_VERSION sharapov/streamfarm-ffmpeg-base:$OS_NAME-ffmpeg-latest
 }
 
 function build_rpi() {
@@ -56,8 +56,8 @@ function build_rpi() {
     --build-arg ALSA_VERSION=$ALSA_VERSION \
     --platform linux/arm64 \
     -f Dockerfile.alpine.rpi \
-    -t datarhei/base:$OS_NAME-ffmpeg-rpi-$OS_VERSION-$FFMPEG_VERSION .
-  docker tag datarhei/base:$OS_NAME-ffmpeg-rpi-$OS_VERSION-$FFMPEG_VERSION datarhei/base:$OS_NAME-ffmpeg-rpi-latest
+    -t sharapov/streamfarm-ffmpeg-base:$OS_NAME-ffmpeg-rpi-$OS_VERSION-$FFMPEG_VERSION .
+  docker tag sharapov/streamfarm-ffmpeg-base:$OS_NAME-ffmpeg-rpi-$OS_VERSION-$FFMPEG_VERSION sharapov/streamfarm-ffmpeg-base:$OS_NAME-ffmpeg-rpi-latest
 }
 
 function build_cuda() {
@@ -80,8 +80,8 @@ function build_cuda() {
     --build-arg FFMPEG_VERSION=$FFMPEG_VERSION \
     --platform linux/amd64 \
     -f Dockerfile.ubuntu.cuda \
-    -t datarhei/base:$OS_NAME-ffmpeg-cuda-$OS_VERSION-$FFMPEG_VERSION-$CUDA_VERSION .
-  docker tag datarhei/base:$OS_NAME-ffmpeg-cuda-$OS_VERSION-$FFMPEG_VERSION-$CUDA_VERSION datarhei/base:$OS_NAME-ffmpeg-cuda-latest
+    -t sharapov/streamfarm-ffmpeg-base:$OS_NAME-ffmpeg-cuda-$OS_VERSION-$FFMPEG_VERSION-$CUDA_VERSION .
+  docker tag sharapov/streamfarm-ffmpeg-base:$OS_NAME-ffmpeg-cuda-$OS_VERSION-$FFMPEG_VERSION-$CUDA_VERSION sharapov/streamfarm-ffmpeg-base:$OS_NAME-ffmpeg-cuda-latest
 }
 
 function build_vaapi() {
@@ -102,8 +102,8 @@ function build_vaapi() {
     --build-arg FFMPEG_VERSION=$FFMPEG_VERSION \
     --platform linux/amd64 \
     -f Dockerfile.ubuntu.vaapi \
-    -t datarhei/base:$OS_NAME-ffmpeg-vaapi-$OS_VERSION-$FFMPEG_VERSION .
-  docker tag datarhei/base:$OS_NAME-ffmpeg-vaapi-$OS_VERSION-$FFMPEG_VERSION datarhei/base:$OS_NAME-ffmpeg-vaapi-latest
+    -t sharapov/streamfarm-ffmpeg-base:$OS_NAME-ffmpeg-vaapi-$OS_VERSION-$FFMPEG_VERSION .
+  docker tag sharapov/streamfarm-ffmpeg-base:$OS_NAME-ffmpeg-vaapi-$OS_VERSION-$FFMPEG_VERSION sharapov/streamfarm-ffmpeg-base:$OS_NAME-ffmpeg-vaapi-latest
 }
 
 main() {

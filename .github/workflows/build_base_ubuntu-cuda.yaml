@@ -75,8 +75,8 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            datarhei/base:ffmpeg${{ env.FFMPEG_VERSION }}-cuda-${{ env.OS_NAME }}${{ env.OS_VERSION }}-cuda${{ env.CUDA_VERSION }}
-            datarhei/base:${{ env.OS_NAME }}-ffmpeg-cuda-${{ env.OS_VERSION }}-${{ env.FFMPEG_VERSION }}-${{ env.CUDA_VERSION }}
-            datarhei/base:${{ env.OS_NAME }}-ffmpeg-cuda-latest
+            sharapov/streamfarm-ffmpeg-base:ffmpeg${{ env.FFMPEG_VERSION }}-cuda-${{ env.OS_NAME }}${{ env.OS_VERSION }}-cuda${{ env.CUDA_VERSION }}
+            sharapov/streamfarm-ffmpeg-base:${{ env.OS_NAME }}-ffmpeg-cuda-${{ env.OS_VERSION }}-${{ env.FFMPEG_VERSION }}-${{ env.CUDA_VERSION }}
+            sharapov/streamfarm-ffmpeg-base:${{ env.OS_NAME }}-ffmpeg-cuda-latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new

@@ -9,8 +9,7 @@ on:
 jobs:
   docker:
     runs-on: 
-      - self-hosted
-      - linux
+      - ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4

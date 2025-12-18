@@ -61,6 +61,8 @@ jobs:
           build-args: |
             BUILD_IMAGE=nvidia/cuda:${{ env.CUDA_VERSION }}-devel-${{ env.OS_NAME }}${{ env.OS_VERSION }}
             DEPLOY_IMAGE=nvidia/cuda:${{ env.CUDA_VERSION }}-runtime-${{ env.OS_NAME }}${{ env.OS_VERSION }}
+            BUILD_DATE=${{ env.CURRENT_DATE }}
+            BUILD_COMMIT=${{ env.CURRENT_COMMIT }}
             FFNVCODEC_VERSION=${{ env.FFNVCODEC_VERSION }}
             FREETYPE_VERSION=${{ env.FREETYPE_VERSION }}
             XML2_VERSION=${{ env.XML2_VERSION }}
@@ -76,8 +78,8 @@ jobs:
           platforms: linux/amd64
           push: true
           tags: |
-            sharapov/streamfarm-ffmpeg-base:ffmpeg${{ env.FFMPEG_VERSION }}-cuda-${{ env.OS_NAME }}${{ env.OS_VERSION }}-cuda${{ env.CUDA_VERSION }}
-            sharapov/streamfarm-ffmpeg-base:${{ env.OS_NAME }}-ffmpeg-cuda-${{ env.OS_VERSION }}-${{ env.FFMPEG_VERSION }}-${{ env.CUDA_VERSION }}
-            sharapov/streamfarm-ffmpeg-base:${{ env.OS_NAME }}-ffmpeg-cuda-latest
+            sharapov/flumixa-base:ffmpeg${{ env.FFMPEG_VERSION }}-cuda-${{ env.OS_NAME }}${{ env.OS_VERSION }}-cuda${{ env.CUDA_VERSION }}
+            sharapov/flumixa-base:${{ env.OS_NAME }}-ffmpeg-cuda-${{ env.OS_VERSION }}-${{ env.FFMPEG_VERSION }}-${{ env.CUDA_VERSION }}
+            sharapov/flumixa-base:${{ env.OS_NAME }}-ffmpeg-cuda-latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new

@@ -53,6 +53,8 @@ jobs:
           file: ./Dockerfile.alpine
           build-args: |
             BUILD_IMAGE=${{ env.OS_NAME }}:${{ env.OS_VERSION }}
+            BUILD_DATE=${{ env.CURRENT_DATE }}
+            BUILD_COMMIT=${{ env.CURRENT_COMMIT }}
             FREETYPE_VERSION=${{ env.FREETYPE_VERSION }}
             XML2_VERSION=${{ env.XML2_VERSION }}
             SRT_VERSION=${{ env.SRT_VERSION }}
@@ -67,8 +69,8 @@ jobs:
           platforms: linux/amd64,linux/arm64,linux/arm/v7
           push: true
           tags: |
-            sharapov/streamfarm-ffmpeg-base:ffmpeg${{ env.FFMPEG_VERSION }}-${{ env.OS_NAME }}${{ env.OS_VERSION }}
-            sharapov/streamfarm-ffmpeg-base:${{ env.OS_NAME }}-ffmpeg-${{ env.OS_VERSION }}-${{ env.FFMPEG_VERSION }}
-            sharapov/streamfarm-ffmpeg-base:${{ env.OS_NAME }}-ffmpeg-latest
+            sharapov/flumixa-base:ffmpeg${{ env.FFMPEG_VERSION }}-${{ env.OS_NAME }}${{ env.OS_VERSION }}
+            sharapov/flumixa-base:${{ env.OS_NAME }}-ffmpeg-${{ env.OS_VERSION }}-${{ env.FFMPEG_VERSION }}
+            sharapov/flumixa-base:${{ env.OS_NAME }}-ffmpeg-latest
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new

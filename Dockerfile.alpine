@@ -2,6 +2,9 @@ ARG BUILD_IMAGE=alpine:3.15
 
 FROM $BUILD_IMAGE AS builder
 
+ARG BUILD_DATE=1970-01-01T00:00:00Z
+ARG BUILD_COMMIT=unknown
+
 ARG FREETYPE_VERSION=2.11.1-r2
 ARG XML2_VERSION=2.9.14-r0
 ARG SRT_VERSION=1.4.2-r1
@@ -72,7 +75,7 @@ RUN cd /dist/ffmpeg-${FFMPEG_VERSION} && \
   patch -p1 < /contrib/ffmpeg-jsonstats.patch && \
   patch -p1 < /contrib/ffmpeg-hlsbitrate.patch && \
   ./configure \
-  --extra-version=flumixa \
+  --extra-version="flumixa-${BUILD_COMMIT}-${BUILD_DATE}" \
   --prefix="${SRC}" \
   --extra-libs="-lpthread -lxml2 -lm -lz -lsupc++ -lstdc++ -lssl -lcrypto -lz -lc -ldl" \
   --enable-nonfree \

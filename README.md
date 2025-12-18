@@ -1,5 +1,7 @@
 # FFmpeg Base
 
+This repo is deprecated. The new repo is [https://github.com/flumixa/ffmpeg](https://github.com/flumixa/ffmpeg)
+
 FFmpeg base image for [flumixa](https://github.com/flumixa).
 
 [![alpine](https://github.com/flumixa/ffmpeg/actions/workflows/build_base_alpine.yaml/badge.svg)](https://github.com/flumixa/ffmpeg/actions/workflows/build_base_alpine.yaml)

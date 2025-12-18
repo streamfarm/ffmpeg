@@ -4,7 +4,7 @@ FFmpeg base image for [flumixa](https://github.com/flumixa).
 
 [![alpine](https://github.com/flumixa/ffmpeg/actions/workflows/build_base_alpine.yaml/badge.svg)](https://github.com/flumixa/ffmpeg/actions/workflows/build_base_alpine.yaml)
 [![alpine-rpi](https://github.com/flumixa/ffmpeg/actions/workflows/build_base_alpine-rpi.yaml/badge.svg)](https://github.com/flumixa/ffmpeg/actions/workflows/build_base_alpine-rpi.yaml)
-[![base:ubuntu-ffmpeg-vvapi](https://github.com/flumixa/ffmpeg/actions/workflows/build_base_ubuntu-vaapi.yaml/badge.svg)](https://github.com/flumixa/ffmpeg/actions/workflows/build_base_ubuntu-vaapi.yaml)
+[![ubuntu-ffmpeg-vvapi](https://github.com/flumixa/ffmpeg/actions/workflows/build_base_ubuntu-vaapi.yaml/badge.svg)](https://github.com/flumixa/ffmpeg/actions/workflows/build_base_ubuntu-vaapi.yaml)
 [![ubuntu-cuda](https://github.com/flumixa/ffmpeg/actions/workflows/build_base_ubuntu-cuda.yaml/badge.svg)](https://github.com/flumixa/ffmpeg/actions/workflows/build_base_ubuntu-cuda.yaml)
 
 Branch: 5.1
@@ -33,12 +33,12 @@ _Additional informations can be found in the Dockerfiles._
 
 ## Images and Platforms:
 
-| Dockerimage                                          | OS           | Plattform                                | GPU                                         |
-|------------------------------------------------------| ------------ | ---------------------------------------- | ------------------------------------------- |
-| docker.io/sharapov/flumixa-base:alpine-ffmpeg-latest | Alpine 3.16  | linux/amd64, linux/arm64, linux/arm/v7   | -                                           |
-| docker.io/sharapov/flumixa-base:alpine-ffmpeg-rpi-latest     | Alpine 3.16  | Raspberry Pi (linux/arm/v7, linux/arm64) | MMAL/OMX/V4L2-M2M (32bit), V4L2-M2M (64bit) |
-| docker.io/sharapov/flumixa-base:ubuntu-ffmpeg-cuda-latest    | Ubuntu 20.04 | linux/amd64                              | Nvidia Cuda                                 |
-| docker.io/sharapov/flumixa-base:ubuntu-ffmpeg-vaapi-latest   | Ubuntu 20.04 | linux/amd64                              | Intel VAAPI                                 |
+| Dockerimage                                                | OS           | Plattform                                | GPU                                         |
+|------------------------------------------------------------|--------------|------------------------------------------|---------------------------------------------|
+| docker.io/sharapov/flumixa-base:alpine-ffmpeg-latest       | Alpine 3.16  | linux/amd64, linux/arm64, linux/arm/v7   | -                                           |
+| docker.io/sharapov/flumixa-base:alpine-ffmpeg-rpi-latest   | Alpine 3.16  | Raspberry Pi (linux/arm/v7, linux/arm64) | MMAL/OMX/V4L2-M2M (32bit), V4L2-M2M (64bit) |
+| docker.io/sharapov/flumixa-base:ubuntu-ffmpeg-cuda-latest  | Ubuntu 20.04 | linux/amd64                              | Nvidia Cuda                                 |
+| docker.io/sharapov/flumixa-base:ubuntu-ffmpeg-vaapi-latest | Ubuntu 20.04 | linux/amd64                              | Intel VAAPI                                 |
 
 More tags: https://hub.docker.com/repository/docker/sharapov/flumixa-base/general
 
@@ -57,7 +57,7 @@ Args:
 
 ## Known problems:
 
-The libraries are currently not compiled due to errors caused by Docker virtualisation.
+The libraries are currently not compiled due to errors caused by Docker virtualization.
 
 ## Feature requests:
 
